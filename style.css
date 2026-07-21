@@ -1,0 +1,314 @@
+/* Мой CSS — исправленный и чистый! */
+
+/* ===== ОБЩИЕ СТИЛИ СТРАНИЦЫ ===== */
+body {
+    background-color: #ffffff;
+    color: rgb(15, 0, 0);
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+    background-image: url("images/a.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: rgb(138, 43, 43);
+    background-color: rgb(167, 155, 155);
+    margin-top: 0;
+    padding: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    border-left: 4px solid #7a7d7e;  
+    padding-left: 12px;             
+}
+
+/* ===== ИЗОБРАЖЕНИЯ ===== */
+img {
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Делает картинку круглой */
+    transition: all 0.3s;
+}
+
+/* ===== КРАСИВОЕ МЕНЮ ===== */
+nav {
+    background-color: #5b6068;
+    display: flex;          /* Ссылки встают в ряд */
+    gap: 4px;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    border-radius: 0 0 10px 10px; /* Нижние углы скруглёны */
+}
+
+nav a {
+    color: #94A3B8;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s; /* Исправлена некорректная запись анимации */
+}
+
+nav a:hover {
+    background-color: #cfcfcf;
+    color: white;
+}
+
+/* ===== ССЫЛКИ ВНЕ МЕНЮ ===== */
+a {
+    color: #777777;
+    text-decoration: none;   
+}
+
+a:hover {
+    color: #7e3b05;
+    text-decoration: underline; /* Исправлена опечатка unberline */
+}
+
+a:active {
+    color: #05722d;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+/* ===== КЛАССЫ И КАРТОЧКИ ===== */
+.highlight {
+    background-color: rgb(209, 209, 99);
+    color: black;
+    padding: 2px 6px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border: 1px solid #6e0000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000000; 
+    color: #ffffff;            
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold; 
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e90c5; 
+    color: #ffffff;            
+}
+
+.btn:active {
+    background-color: #092838;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+@media (max-width: 600px) { /* Исправлено: вместо h2 подставлено 600px */
+
+    body {
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    nav {
+        flex-direction: column;  /* Меню становится вертикальным */
+        border-radius: 10px;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 100%;   /* Картинка растягивается на всю ширину */
+        height: auto;
+    }
+}
+
+.btn-glow {
+    display: inline-block;
+    background: linear-gradient(135deg, #38BDF8, #6366F1);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    transition: all 0.3s;
+}
+
+.btn-glow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.btn-pulse {
+    display: inline-block;
+    background-color: #FB923C;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.btn-pulse {
+    display: inline-block;
+    background-color: #FB923C;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+:root {
+    --main-color: #38BDF8;
+    --dark-bg: #1E293B;
+    --radius: 10px;
+}
+
+nav {
+    background-color: var(--dark-bg);
+    border-radius: var(--radius);
+}
+
+.btn {
+    background-color: var(--main-color);
+    border-radius: var(--radius);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+
+
+body {
+    background: linear-gradient(-45deg, #ffffff, #424040, #ffffff, #4b4c4c);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.cursor-trail {
+    position: absolute;
+    font-size: 20px;
+    pointer-events: none;
+    animation: trailFade 0.8s ease-out forwards;
+    z-index: 9999;
+}
+@keyframes trailFade {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(1.5) translateY(-20px);}
+}
+.cursor-trail {
+    position: absolute;
+    font-size: 20px;
+    pointer-events: none;
+    animation: trailFade 0.8s ease-out forwards;
+    z-index: 9999;
+}
+@keyframes trailFade {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(1.5) translateY(-20px); }
+}
+
+.cursor-trail {
+    position: absolute;
+    font-size: 20px;
+    pointer-events: none;
+    animation: trailFade 0.8s ease-out forwards;
+    z-index: 9999;
+}
+@keyframes trailFade {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(1.5) translateY(-20px); }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ .burst-bone {
+    position: absolute;
+    pointer-events: none;
+    font-size: 18px;
+    animation: burstFly 0.7s ease-out forwards;
+}
+@keyframes burstFly {
+    to { transform: translate(var(--x), var(--y)); opacity: 0; }
+}
+

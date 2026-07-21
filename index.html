@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная</title> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  
+  </script>
+  <body>
+
+  <!-- Навигация -->
+  <nav>
+    <a href="index.html">🏠 Главная</a>
+    <a href="page2.html">🐶 здоровье собаки</a>
+    <a href="page3.html">🐾 команды</a>
+    <a href="страница 4.html">🐕 информация о собаках</a>
+  </nav>            
+
+  <h1>Собака — друг человека</h1>       
+  <p>На этом сайте вы найдёте информацию о здоровье собаки, её воспитании и поведении.</p>             
+
+  <!-- Исправлено: добавлена закрывающая скобка > в конце тега -->
+  <img src="images/asd.jpg" alt="собака и человек"    width="440"   height="550">
+
+  <p>Мой сайт про <span class="highlight">собак</span>.</p>
+  
+ 
+  <div class="card">
+    <p>Собака — не просто питомец, а настоящий член семьи, который дарит безусловную любовь и каждый день учит нас радоваться мелочам. 
+      Но чтобы эта дружба была счастливой и безопасной, важно понимать своего четвероногого друга: знать, как сохранить его здоровье,
+       как мягко и эффективно обучать командам, как реагировать на тревожные симптомы.
+      На нашем сайте вы найдёте понятные и проверенные рекомендации: от первых шагов в дрессировке до советов ветеринаров</p> 
+    <img src="images/wasd.jpg" alt="собака" width="250">
+  </div>
+
+
+  <div class="card">
+    <h2>Наш сайт создан с целью помощи хозяевам собак</h2>
+    <p>Любой домашний питомец это в 1 очередь ответственность .хозяин питомца несёт ответственность за его здоровье,жизнь и благополучие.Но есть те люди которые не знают как правильно 
+      ухаживать за питомцем, в этом и есть цель сайта,обеспечить пользоватиля информацией.Приятного прочтения </p>
+  </div>
+
+  <!-- ДОБАВЛЕНО: Ваша кнопка! -->
+  <div style="margin-top: 20px;">
+    <a href="page3.html" class="btn">Изучить Команды</a>
+    <!-- Исправлено: ссылка перенесена внутрь блока div и до тега body -->
+    <a href="page2.html" class="btn-glow">Узнать советы по здоровью собаки</a>
+  </div>
+
+  <script>
+    document.addEventListener('click', (e) => {
+        for (let i = 0; i < 10; i++) {
+            const bone = document.createElement('div');
+            bone.className = 'burst-bone';
+            bone.textContent = '🦴';
+            bone.style.left = e.pageX + 'px';
+            bone.style.top = e.pageY + 'px';
+            const angle = Math.random() * 2 * Math.PI;
+            const dist = 60 + Math.random() * 40;
+            bone.style.setProperty('--x', Math.cos(angle) * dist + 'px');
+            bone.style.setProperty('--y', Math.sin(angle) * dist + 'px');
+            document.body.appendChild(bone);
+            setTimeout(() => bone.remove(), 700);
+        }
+    });
+    </script>
+    
+<script>
+  document.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.textContent = '🐾';
+      trail.style.left = e.pageX + 'px';
+      trail.style.top = e.pageY + 'px';
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 800);
+  });
+  </script>
+    </body>  <script>
+      
+      </script>
+
+  
+  
+</html>
+
+  
+  <div class="card reveal">...</div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+  
+  
